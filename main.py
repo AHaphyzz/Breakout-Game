@@ -5,15 +5,6 @@ from bricks import Bricks
 from set_screen import SetScreen
 import time
 
-"""To-do List
-- Set Interface - boundaries, color, show score, show lives
-- set paddle - functionality (move horizontally with direction keys, ball bounce off in upward directions)
-- set walls - functionality (ball to bounce off)
-- set ball - functionality (move around, hid paddle, walls and obstacles)
-- set obstacle - functionality (ball bounces off in downward directions, ball speed increase with each strike)
-- score - functionality (calculate, keep and display score)
-- lives - functionality (calculate number of tries left)
-"""
 # Game Interface
 screen = Screen()
 screen.setup(width=600, height=400)
