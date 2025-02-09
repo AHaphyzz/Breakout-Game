@@ -1,6 +1,11 @@
-from turtle import Turtle
+from turtle import Turtle, Screen
 import random
 
+screen = Screen()
+
+lis = (screen.addshape("blue_brick.gif"), screen.addshape("green_brick.gif"),
+       screen.addshape("red_brick.gif"), screen.addshape("yellow_brick.gif"))
+set_lis = ("blue_brick.gif", "red_brick.gif", "yellow_brick.gif", "red_brick.gif")
 
 LEVEL_1 = [
     # top layer
@@ -17,7 +22,7 @@ LEVEL_2 = [
     (-120, 105), (-60, 105), (0, 105), (60, 105), (120, 105),
     (-30, 85), (30, 85)
 ]
-OBS_COLORS = ["red4", "#FF4500", "#32CD32", "MidnightBlue", "#9400D3", "gold", "#FF1493", "#1E90FF", "#FFD700"]
+OBS_COLORS = ["red4", "#FF4500", "#32CD32", "gold", "#FF1493", "#1E90FF", "#FFD700"]
 
 
 class Bricks(Turtle):
@@ -37,6 +42,7 @@ class Bricks(Turtle):
 
     def create_brick(self, position):
         wall = Turtle("square")
+        # wall.shape(set_lis)
         wall.shapesize(stretch_wid=1, stretch_len=3)
         wall.color(random.choice(OBS_COLORS))
         wall.penup()
